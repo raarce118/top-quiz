@@ -21,12 +21,36 @@
                 <h1 class="code-title">Top-Quiz</h1>
 </div>
 <hr>
-<!--Intriduced code and location for the timer-->
+<!--Introduced code and location for the timer-->
 <div class="col-lg-4"></div>
      <div class="col-lg-4">
-         <h2 class="float-right text-primary d-none" id="timecounter">Timer :<span id="timer">120</span></h2>
-    </div>
+         <h2 class="float-right text-primary d-none" id="timecounter">Timer :<span id="timer">60</span></h2>
+     </div>
 
-</body>
+<div class ="quiz-questions d-none" id="quiz-questions">
+     <h3 class="text-info text-center" id="title-item"></h3>
+     <div class="answers mt-5 mb-5" id="question-answers">
+</div>
+
+<hr>
+
+<div class="btnstartd-flex flex column justify-content-center mt-20 mb-10">
+     <p id="info">Answer the following questions within the time limit. Your score will be saved at the end and you may try again for a new Top Quiz score.</p>
+     <button class="btn btn-primary btn-lg" id="btn-start">Begin Quiz</button>
+</div>
+
+<hr>
+
+<div class=" input-group mb-3 d-none" id="addscore">
+    <h5 class="d-block"><span id="score"></span></h5>
+        <input type="text" class="form-control" placeholder="Enter your initials:"
+        id="inputScore" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="input-group-text btn btn-primary" id="btnScore">Submit</button>
+</div>
+
+
 <script>src="script.js"</script>
+</body>
+
 </html>

@@ -1,0 +1,30 @@
+body,html{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-image: url(./Images/timer-background.jpg);
+    background-size: contain;
+}
+.game-box{
+    background: gray;
+    
+}
+.answer-item{
+    background: rgb(223, 201, 7);
+    width: 90%;
+    display: inline-block;
+    border-radius:8px;
+    padding: 3px;
+}
+#btn-start{
+    border:none;
+	padding:6px 0 6px 0;
+	border-radius:8px;
+	background: black;
+    font-weight: bolder;
+	color:white;
+}
+
+#code-title{
+    text-align: center;
+    font-weight: bold;
+}
