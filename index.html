@@ -13,35 +13,35 @@
 
     <!--Header-->
 
-    <!--Using Bootstrap's grid system for the rows, columns, and layount alignment-->
+    <!--grid system for the rows, columns, and layount alignment-->
 <div class="container d-flex justify-content-center mt-5">
-     <div class="game-box col-lg-8 p-4">
+     <div class="game-box col-lg-8">
         <div class="row pb-4">
             <div class="col-lg-4">
                 <h1 class="code-title">Top-Quiz</h1>
 </div>
 <hr>
-<!--Introduced code and location for the timer-->
+<!--Introduced code and location for the timer and questions ID-->
 <div class="col-lg-4"></div>
      <div class="col-lg-4">
-         <h2 class="float-right text-primary d-none" id="timecounter"> Timer :<span id ="timer">75</span></h2>
+         <h2 class="float-right text-primary d-none" id="countdown"> Timer :<span id ="timer">75</span></h2>
      </div>
 
-<div class ="quiz-questions d-none" id="quiz-questions">
+<div class ="quiz-questions" id="quiz-questions">
      <h3 class="text-info text-center" id="title-item"></h3>
-     <div class="answers mt-5 mb-5" id="question-answers">
+     <div class="answers" id="question-answers">
 </div>
 <h4 id = "alert"></h4>
 <hr>
-
+<!--introduced code for the title and instructions-->
 <div class= "main-container">
      <p id="info">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.</p>
      <button id = "btn-start" class= "btn btn-dark btn-lg" >Start Quiz</button>
 </div>
 
 <hr>
-
-<div class=" input-group mb-3 d-none" id="addscore">
+<!--code for adding your score-->
+<div class=" input-group" id="addscore">
     <h5 class="d-block"><span id="score"></span></h5>
         <input type="text" class="form-control" placeholder="Enter your initials:"
         id="inputScore" aria-describedby="basic-addon2">

@@ -1,7 +1,8 @@
+//list of var that will be working with//
 var quizQuestions = document.getElementById("quiz-questions");
 var timer = document.getElementById("timer");
 var btnStart = document.getElementById("btn-start");
-var timecounter = document.getElementById("timecounter");
+var timecounter = document.getElementById("countdown");
 var titleitem = document.getElementById("title-item");
 var nextQuestions 
 var questionanswers = document.getElementById("question-answers");
@@ -16,6 +17,7 @@ var allScores = [];
 var storedScores = JSON.parse(localStorage.getItem("userData"));
 var questions = [
 
+    //Questions listed//
      {
         title: "Commonly used datypes DO NOT include:",
         choices: ["strings","booleans","alerts", "numbers"],
@@ -51,6 +53,7 @@ var questions = [
 
 ]
 
+//code for starting the quiz and displaying the next question
 btnStart.addEventListener("click", startQuiz);
 function startQuiz(){
     if(storedScores !==null) {
@@ -65,31 +68,19 @@ function startQuiz(){
     
         displayQuestion(nextQuestions)
 
-    gametime()
+    quizstart()
 }
 btnScore.addEventListener("click" , function(){
     let name = document.getElementById("inputScore").value
     scorePage(name, count)
 });
 
-function gametime(){
+function quizstart(){
 
     var timeinterval = setInterval(function(){
         timer.innerText = count
          count--;
         }, 1000);
-
-}
-
-function scorePage(a, b) {
-
-    var userData = {
-        inits: a,
-        userScore: b
-    };
-    allScores.push(userData);
-
-    localStorage.setItem("userData", JSON.stringify(allScores));
 
 }
 
@@ -119,14 +110,8 @@ function displaynextQuestion(e){
             displayQuestion(nextQuestions)  
         }
 
-    }else{
-        console.log("endgame")
-        endgame()
-        
-
     }
-    
-     
+         
 }
 function correction(response){
     
@@ -146,13 +131,3 @@ function correction(response){
         }, 1000);
 
 }
- function endgame (){
-    // btnStart.classList.add("d-none")
-    myScore.innaText = count
-    addscore.classList.remove("d-none")
-    timecounter.classList.add("d-none")
-    quizQuestions.classList.add("d-none")
-    addscore.classList.remove("d-none")
-
-
- }
